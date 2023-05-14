@@ -51,7 +51,6 @@
   const fetchData = async (searchString) => {
     // 2023-04-25 - using a serverless function.
     const URL = "https://jrrio.netlify.app/lang";
-    // const URL = "http://localhost:9999/.netlify/functions/lang"
     try {
       const response = await fetch(URL, {
         method: "POST",
@@ -158,7 +157,7 @@
   const debounce = (func, wait = 250) => {
     let timeout;
     return function(event) {
-      console.log(`debounced ${func.name} called`)
+      // console.log(`debounced ${func.name} called`)
       clearTimeout(timeout);
       timeout = setTimeout(() => func(event), wait);
     }
