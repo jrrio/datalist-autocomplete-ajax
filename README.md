@@ -1,4 +1,4 @@
-**Autocomplete HTML5 Datalist using AJAX**
+# Autocomplete input with HTML5 Datalist using AJAX
 
 Instead of manually adding dozens of options to a HTML5 Datalist, this demo uses AJAX to provide suggestions (autocomplete) to a Datalist while the user types in the input field.
 
