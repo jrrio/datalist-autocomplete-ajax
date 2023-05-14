@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autocomplete</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <form name="frm" class="frm" action="#" onsubmit="return false;">
+      <label for="search">Type in the name of a Programming Language:</label>
+      <input type="text" id="search" name="search" list="lang" autocomplete="off"
+        placeholder="Java, lisp, scheme..." />
+      <datalist id="lang">
+        <!-- Select is a workaround for older versions of Safari -->
+        <select name="lang_sel" id="lang_sel">
+          <!--JS code will add / change options here-->
+        </select>
+      </datalist>
+      <button type="button" class="btn-showmodal" disabled>Submit Selected Option</button>
+    </form>
+
+    <div class="error-message"></div>
+
+    <dialog id="myDialog">
+      <p class="selectedOption"></p>
+      <button type="button" class="btn-closedialog">Close</button>
+    </dialog>
+
+    <footer>
+      <p>See <a href="https://caniuse.com/#feat=datalist" target="_blank"
+          rel="noopener">https://caniuse.com/#feat=datalist</a> for browser support.</p>
+    </footer>
+
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
