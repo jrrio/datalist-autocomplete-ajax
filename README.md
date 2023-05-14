@@ -1,6 +1,6 @@
 # Autocomplete input with HTML5 Datalist using AJAX
 
-Instead of manually adding dozens of options to a HTML5 Datalist, this demo uses AJAX to provide suggestions (autocomplete) to a Datalist while the user types in the input field.
+Instead of manually adding dozens of options to a HTML5 Datalist, this demo uses AJAX to provide suggestions (options) to a Datalist while the user types in the input field.
 
 The goal here is to fetch programming languages from the server (Netlify Serverless Function) and store in a local cache, in order to avoid fetching over and over again for the same languages.
 
