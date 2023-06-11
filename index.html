@@ -11,11 +11,10 @@
 
 <body>
 
-
+  <div class="wrapper">
     <form name="frm" class="frm" action="#" onsubmit="return false;">
       <label for="search">Type in the name of a Programming Language:</label>
-      <input type="text" id="search" name="search" list="lang" autocomplete="off"
-        placeholder="Java, lisp, scheme..." />
+      <input type="text" id="search" name="search" list="lang" autocomplete="off" placeholder="Java, lisp, scheme..." />
       <datalist id="lang">
         <!-- Select is a workaround for older versions of Safari -->
         <select name="lang_sel" id="lang_sel">
@@ -27,18 +26,19 @@
 
     <div class="error-message"></div>
 
-    <dialog id="myDialog">
-      <p class="selectedOption"></p>
-      <button type="button" class="btn-closedialog">Close</button>
-    </dialog>
-
     <footer>
-      <p>See <a href="https://caniuse.com/#feat=datalist" target="_blank"
-          rel="noopener">https://caniuse.com/#feat=datalist</a> for browser support.</p>
+      <p>See <a href="https://caniuse.com/#feat=datalist" target="_blank" rel="noopener">https://caniuse.com/#feat=datalist</a> for browser support.</p>
     </footer>
+  </div>
+
+  <dialog id="myDialog">
+    <p class="selectedOption"></p>
+    <button type="button">Close</button>
+  </dialog>
 
 
   <script type="module" src="/main.js"></script>
+
 </body>
 
 </html>

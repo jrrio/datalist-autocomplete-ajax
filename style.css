@@ -8,19 +8,20 @@ body {
   background: #c9c9f5;
   font: 1.125rem / 1.5 "Poppins", sans-serif;
   color: #222;
+}
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   padding: 5vh clamp(1rem, 5vw, 3rem) 2rem;
 }
-body > * {
+.wrapper > * {
   --layout-spacing: max(8vh, 3rem);
   --max-width: 70ch;
-  width: min(100% - 2rem, var(--max-width));
-/*   inline-margin: auto; */
+  width: min(100% - 4rem, var(--max-width));
 }
-form {
+.frm {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -49,18 +50,6 @@ button,
 input,
 select {
   font: inherit;
-}
-dialog {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 input[list="lang"] {
   background: #eee;
@@ -93,6 +82,46 @@ select[name="lang_sel"] {
   padding: 0.6rem 1.2rem;
   width: fit-content;
 }
-.selectedOption {
-  margin-bottom: 2rem
+
+/****************************/
+/* Style the dialog element */
+/****************************/
+#myDialog {
+  background: white;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-inline: auto;
+  position: fixed !important; /* Chrome sets position:absolute */
+  top: 2rem;
+  width: 300px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
+#myDialog[open] {
+  opacity: 1;
+}
+
+#myDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#myDialog button {
+  width: 100px;
+  border: none;
+  background: #606061;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#myDialog button:hover {
+  background: #343436;
 }
